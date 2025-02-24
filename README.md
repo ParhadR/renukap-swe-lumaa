@@ -1,3 +1,63 @@
+# Task Management Application
+
+A full-stack Task Management application built with:
+- **Backend:** Node.js, Express, TypeScript, PostgreSQL
+- **Frontend:** React, TypeScript
+- **Authentication:** JWT-based (with bcrypt for password hashing)
+
+
+## Project Structure
+
+### Backend
+backend/ 
+├── src/ 
+│ ├── index.ts # Entry point of the server 
+│ ├── db.ts # PostgreSQL connection setup 
+│ ├── middleware/ 
+│ │ └── auth.ts # JWT verification middleware 
+│ └── routes/ 
+│   ├── auth.ts # /auth routes (register & login) 
+│   └── tasks.ts # /tasks routes (CRUD for tasks) 
+├── migrations.sql # SQL for creating tables (users and tasks) 
+├── .env # Environment variables 
+├── package.json 
+└── tsconfig.json
+
+
+### Frontend
+frontend/ 
+├── public/ 
+├── src/ 
+│ ├── components/ 
+│ │ ├── Login.tsx # Login form using useNavigate │ 
+│ ├── Register.tsx # Registration form using useNavigate │ 
+│ ├── TaskList.tsx # Displays tasks and includes update/delete options 
+│ │ └── TaskForm.tsx # Form for creating a new task 
+│ ├── App.tsx # App routing using React Router v6 
+│ ├── index.tsx # React entry point 
+│ └── (optional) global.d.ts # Custom type declarations for environment variables ├── .env # Environment variables for React (must start with REACT_APP_) 
+├── package.json 
+└── tsconfig.json
+
+
+---
+
+## Prerequisites
+
+- [Node.js](https://nodejs.org/) (v14+ recommended)
+- [npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/)
+- [PostgreSQL](https://www.postgresql.org/) (ensure it is installed and running)
+
+---
+
+## Backend Setup
+
+1. **Navigate to the Backend Folder:**
+   ```bash
+   cd backend
+
+
+
 # Full-Stack Coding Challenge
 
 **Deadline**: Sunday, Feb 23th 11:59 pm PST
